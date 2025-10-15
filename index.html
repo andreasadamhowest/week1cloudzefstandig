@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My News Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6mY5Y2bYb7w5n1mXKp6v9K/2e6sV1lZC2e5k5K5Q1z5q5G5z5Z5z5Z5z5" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --brand:#0d6efd; /* Bootstrap primary */
+        --muted:#6c757d;
+        --card-bg:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,255,0.95));
+      }
+      html,body{height:100%;}
+      body {
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        padding-top: 70px; /* space for fixed navbar */
+        background: linear-gradient(180deg,#f6f8fb 0%, #eef2f6 100%);
+        color:#212529;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+      }
+      .navbar-brand{font-weight:700;letter-spacing:0.2px}
+      .news-card{
+        transition: transform .18s ease, box-shadow .18s ease;
+        border:0;
+        background:var(--card-bg);
+        border-radius:12px;
+      }
+      .news-card:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(33,37,41,0.08);
+      }
+      .card-title{font-weight:600;color:#0b2147}
+      .card-text{color:var(--muted);font-size:0.95rem}
+      .btn-primary{
+        background: linear-gradient(90deg,var(--brand),#2563eb);
+        border:0;
+        box-shadow:none;
+      }
+      .btn-primary:hover{filter:brightness(.95)}
+      @media (max-width:575.98px){
+        .navbar-brand{font-size:1rem}
+        main{padding-left:0.5rem;padding-right:0.5rem}
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">My News Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">World</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main container -->
+    <main class="container mt-4">
+      <div class="row mb-3">
+        <div class="col">
+          <h1 class="h3">Latest News</h1>
+          <p class="text-muted">Up-to-date headlines and short summaries. Click "Read more" to view full articles.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- News card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">City Council Approves New Park</h5>
+              <p class="card-text">The city council voted unanimously to convert a vacant lot into a public park with playgrounds and native gardens.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Tech Startup Releases Open Tool</h5>
+              <p class="card-text">A new open-source tool aims to simplify data visualization for small businesses and educators.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Local School Wins Science Award</h5>
+              <p class="card-text">Students from the local high school brought home top honors at the regional science fair for their renewable energy project.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News card 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Farmers Market Expands</h5>
+              <p class="card-text">The popular weekend farmers market will add five new vendors this season, including a bakery and a cheese maker.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News card 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Art Gallery Opens New Exhibit</h5>
+              <p class="card-text">A contemporary art exhibit featuring local artists opens this Friday with free admission for the first week.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News card 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card news-card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">New Cycling Path Connects Neighborhoods</h5>
+              <p class="card-text">A newly completed cycle path provides a safe route between two neighborhoods, promoting active commutes and recreation.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Bootstrap JS (Bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoHkM6QZ6jIW3" crossorigin="anonymous"></script>
+  </body>
+</html>
